@@ -1,0 +1,18 @@
+---
+- project:
+    check:
+      jobs:
+        - ansible-builder-build-container-image
+    gate:
+      jobs:
+        - ansible-builder-build-container-image
+    post:
+      jobs:
+        - ansible-builder-upload-container-image:
+            vars:
+              upload_container_image_promote: false
+    periodic:
+      jobs:
+        - ansible-builder-upload-container-image:
+            vars:
+              upload_container_image_promote: false

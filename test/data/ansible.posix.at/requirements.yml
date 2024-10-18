@@ -1,0 +1,5 @@
+---
+collections:
+  - name: https://github.com/AlanCoding/ansible.posix.git
+    version: ee_req
+    type: git
